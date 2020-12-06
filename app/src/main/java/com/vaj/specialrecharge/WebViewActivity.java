@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class WebViewActivity extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class WebViewActivity extends AppCompatActivity {
         }
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
 
         webView.loadUrl("https://specialrecharge.online/");
     }
